@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/Users/steven/Documents/Repository/OpenGL-Learning/build",
+  "command": "/usr/bin/clang -I/opt/homebrew/Cellar/glad/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -o CMakeFiles/GLAD.dir/opt/homebrew/Cellar/glad/src/glad.c.o -c /opt/homebrew/Cellar/glad/src/glad.c",
+  "file": "/opt/homebrew/Cellar/glad/src/glad.c"
+},
+{
+  "directory": "/Users/steven/Documents/Repository/OpenGL-Learning/build",
+  "command": "/usr/bin/clang++ -I/opt/homebrew/Cellar/glad/include -I/opt/homebrew/Cellar/glfw/3.3.8/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o source/CMakeFiles/Run.dir/main.cpp.o -c /Users/steven/Documents/Repository/OpenGL-Learning/source/main.cpp",
+  "file": "/Users/steven/Documents/Repository/OpenGL-Learning/source/main.cpp"
+},
+{
+  "directory": "/Users/steven/Documents/Repository/OpenGL-Learning/build",
+  "command": "/usr/bin/clang++ -I/opt/homebrew/Cellar/glad/include -I/opt/homebrew/Cellar/glfw/3.3.8/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o source/opengl-learning/ch01-02-IboTest/CMakeFiles/Ch01-02-IboTest.dir/ibo_test.cpp.o -c /Users/steven/Documents/Repository/OpenGL-Learning/source/opengl-learning/ch01-02-IboTest/ibo_test.cpp",
+  "file": "/Users/steven/Documents/Repository/OpenGL-Learning/source/opengl-learning/ch01-02-IboTest/ibo_test.cpp"
+}
+]

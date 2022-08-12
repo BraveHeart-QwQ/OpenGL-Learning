@@ -1,0 +1,120 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "source/opengl-learning/ch01-02-IboTest/libCh01-02-IboTest.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"source/opengl-learning/ch01-02-IboTest/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 2,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 7,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk"
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/opt/homebrew/Cellar/glad/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/opt/homebrew/Cellar/glfw/3.3.8/include"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "GLAD::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "Ch01-02-IboTest::@8488bdbd7d58d0ef4c89",
+	"name" : "Ch01-02-IboTest",
+	"nameOnDisk" : "libCh01-02-IboTest.a",
+	"paths" : 
+	{
+		"build" : "source/opengl-learning/ch01-02-IboTest",
+		"source" : "source/opengl-learning/ch01-02-IboTest"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "source/opengl-learning/ch01-02-IboTest/ibo_test.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
