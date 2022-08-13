@@ -8,7 +8,7 @@
 	"installers" : [],
 	"paths" : 
 	{
-		"build" : "source/opengl-learning/ch01-02-IboTest",
-		"source" : "source/opengl-learning/ch01-02-IboTest"
+		"build" : "Source/OpenglLearning/CH01_02_IboTest",
+		"source" : "Source/OpenglLearning/CH01_02_IboTest"
 	}
 }

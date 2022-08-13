@@ -23,34 +23,34 @@
 					]
 				},
 				{
-					"build" : "source",
+					"build" : "Source",
 					"childIndexes" : 
 					[
 						2
 					],
-					"jsonFile" : "directory-source-Debug-5b5a50b02d94cdb5eb2c.json",
+					"jsonFile" : "directory-Source-Debug-eacbe9370dac00d92cd9.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.2"
 					},
 					"parentIndex" : 0,
 					"projectIndex" : 0,
-					"source" : "source",
+					"source" : "Source",
 					"targetIndexes" : 
 					[
 						2
 					]
 				},
 				{
-					"build" : "source/opengl-learning/ch01-02-IboTest",
-					"jsonFile" : "directory-source.opengl-learning.ch01-02-IboTest-Debug-f608ecc61c590276bf4f.json",
+					"build" : "Source/OpenglLearning/CH01_02_IboTest",
+					"jsonFile" : "directory-Source.OpenglLearning.CH01_02_IboTest-Debug-d0a3ee46ab0a16a5b9b7.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.2"
 					},
 					"parentIndex" : 1,
 					"projectIndex" : 0,
-					"source" : "source/opengl-learning/ch01-02-IboTest",
+					"source" : "Source/OpenglLearning/CH01_02_IboTest",
 					"targetIndexes" : 
 					[
 						0
@@ -80,9 +80,9 @@
 			[
 				{
 					"directoryIndex" : 2,
-					"id" : "Ch01-02-IboTest::@8488bdbd7d58d0ef4c89",
-					"jsonFile" : "target-Ch01-02-IboTest-Debug-1bff3aaffa3eab97d937.json",
-					"name" : "Ch01-02-IboTest",
+					"id" : "Ch01_02_IboTest::@0ceb37902c48705e2232",
+					"jsonFile" : "target-Ch01_02_IboTest-Debug-613fc73b139742ba01ba.json",
+					"name" : "Ch01_02_IboTest",
 					"projectIndex" : 0
 				},
 				{
@@ -94,8 +94,8 @@
 				},
 				{
 					"directoryIndex" : 1,
-					"id" : "Run::@411ffd8adc737496fe19",
-					"jsonFile" : "target-Run-Debug-8111a750468fa7b3a01c.json",
+					"id" : "Run::@43690dd2fb94c8e45e84",
+					"jsonFile" : "target-Run-Debug-b5857daa3a3919bcad6c.json",
 					"name" : "Run",
 					"projectIndex" : 0
 				}

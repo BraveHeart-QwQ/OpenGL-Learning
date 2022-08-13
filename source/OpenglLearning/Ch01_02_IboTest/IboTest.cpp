@@ -1,31 +1,16 @@
-#include "vbo_test.hpp"
+#include "IboTest.hpp"
 #include <iostream>
 
-namespace ch1_vbo_test {
+namespace ch1_ibo_test {
 
 /*---------- Internal Function ----------*/
 
-void UpdateRender(unsigned int shader_program, unsigned int VAO, unsigned int VBO, GLsizeiptr size, const void* data, GLenum usage)
-{
-	// 0. 复制顶点数组到缓冲中供 OpenGL 使用
-	glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	glBufferData(GL_ARRAY_BUFFER, size, data, usage);
-	// 1. 设置顶点属性指针
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-	glEnableVertexAttribArray(0);
-	// 2. 当我们渲染一个物体时要使用着色器程序
-	glUseProgram(shader_program);
-	// 3. 绑定 VAO
-	glBindVertexArray(VAO);
-	// 4. 绘制物体
-	// CRITICAL 这里添加或修改绘制物体的函数
-}
-
-void UpdateStaticRender(unsigned int shader_program, unsigned int VAO)
+void UpdateStaticRender(unsigned int shader_program, unsigned int IBO, unsigned int VAO)
 {
 	//glUseProgram(shader_program);
 	//glBindVertexArray(VAO);
-	glDrawArrays(GL_TRIANGLES, 0, 3); // CRITICAL 这里添加或修改绘制物体的函数
+	//glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
+	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // CRITICAL 这里添加或修改绘制物体的函数
 }
 
 void InitGLFW()
@@ -160,22 +145,38 @@ int RealMain(int argc, const char* argv[])
 	glDeleteShader(vertex_shader);   // 删除着色器
 	glDeleteShader(fragment_shader); // 删除着色器
 
-	/* 初始化 VBO 和 VAO */
-	unsigned int VBO, VAO;
+	/* 初始化 VBO、VAO 和 IBO */
+	unsigned int VBO, VAO, IBO;
 	glGenBuffers(1, &VBO);
+	glGenBuffers(1, &IBO);
 	glGenVertexArrays(1, &VAO);
 	glBindVertexArray(VAO);
 
-	/* 循环前初始化（如果不频繁改变物体，则只运行一次） */
+	/* 渲染前初始化（如果不频繁改变物体，则只运行一次） */
 	float vertices[] = {
-	    -0.5f, -0.5f, 0.0f, // left
-	    0.5f, -0.5f, 0.0f,  // right
-	    0.0f, 0.5f, 0.0f    // top
+	    0.5f, 0.5f, 0.0f,   // 右上角
+	    0.5f, -0.5f, 0.0f,  // 右下角
+	    -0.5f, -0.5f, 0.0f, // 左下角
+	    -0.5f, 0.5f, 0.0f   // 左上角
+	};
+	unsigned int indices[] = {
+	    // 注意索引从0开始!
+	    // 此例的索引(0,1,2,3)就是顶点数组vertices的下标，
+	    // 这样可以由下标代表顶点组合成矩形
+
+	    0, 1, 3, // 第一个三角形
+	    1, 2, 3  // 第二个三角形
 	};
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW); // NOTE 导入顶点数据，这里没有
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
+
+	/* 渲染设置 */
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); // 填充模式（默认）
+	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // 线框模式
 
 	/* 渲染循环 */
 	while (!glfwWindowShouldClose(window)) {
@@ -184,8 +185,7 @@ int RealMain(int argc, const char* argv[])
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 设置无色区域的默认颜色
 		glClear(GL_COLOR_BUFFER_BIT);         // 清空缓冲区的某个缓冲
 
-		//UpdateRender(shader_program, VAO, VBO, xxx, xxx, GL_STATIC_DRAW); // CRITICAL 物体频繁修改时的单帧渲染
-		UpdateStaticRender(shader_program, VAO); // CRITICAL 物体不修改时的单帧渲染
+		UpdateStaticRender(shader_program, IBO, VAO); // CRITICAL 物体不修改时的单帧渲染
 
 		glfwPollEvents();        // 调用事件
 		glfwSwapBuffers(window); // 交换缓冲
@@ -201,4 +201,4 @@ int RealMain(int argc, const char* argv[])
 	return 0;
 }
 
-} // namespace ch1_vbo_test
+} // namespace ch1_ibo_test

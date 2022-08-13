@@ -47,4 +47,4 @@ set(EIGEN_INC "/opt/homebrew/Cellar/eigen/3.4.0_1/include/eigen3" CACHE PATH "EI
 
 
 # Add Subdirectory
-add_subdirectory("source")
+add_subdirectory("Source")

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "source/Run"
+			"path" : "Source/Run"
 		}
 	],
 	"backtrace" : 1,
@@ -16,7 +16,7 @@
 		],
 		"files" : 
 		[
-			"source/CMakeLists.txt"
+			"Source/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -26,19 +26,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 8,
+				"line" : 7,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 17,
+				"line" : 16,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 13,
+				"line" : 12,
 				"parent" : 0
 			}
 		]
@@ -89,10 +89,10 @@
 		},
 		{
 			"backtrace" : 2,
-			"id" : "Ch01-02-IboTest::@8488bdbd7d58d0ef4c89"
+			"id" : "Ch01_02_IboTest::@0ceb37902c48705e2232"
 		}
 	],
-	"id" : "Run::@411ffd8adc737496fe19",
+	"id" : "Run::@43690dd2fb94c8e45e84",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -117,7 +117,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "source/opengl-learning/ch01-02-IboTest/libCh01-02-IboTest.a",
+				"fragment" : "Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a",
 				"role" : "libraries"
 			},
 			{
@@ -137,8 +137,8 @@
 	"nameOnDisk" : "Run",
 	"paths" : 
 	{
-		"build" : "source",
-		"source" : "source"
+		"build" : "Source",
+		"source" : "Source"
 	},
 	"sourceGroups" : 
 	[
@@ -155,7 +155,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "source/main.cpp",
+			"path" : "Source/main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

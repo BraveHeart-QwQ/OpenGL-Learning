@@ -1,4 +1,4 @@
-# Install script for directory: /Users/steven/Documents/Repository/OpenGL-Learning/source
+# Install script for directory: /Users/steven/Documents/Repository/OpenGL-Learning/Source
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,6 +39,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Users/steven/Documents/Repository/OpenGL-Learning/build/source/opengl-learning/ch01-02-IboTest/cmake_install.cmake")
+  include("/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/OpenglLearning/CH01_02_IboTest/cmake_install.cmake")
 endif()
 

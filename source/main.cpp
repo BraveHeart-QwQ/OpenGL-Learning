@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#include "opengl-learning/ch01-02-IboTest/ibo_test.hpp"
+#include "OpenglLearning/Ch01_02_IboTest/IboTest.hpp"
 
 using namespace std;
 
