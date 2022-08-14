@@ -1,20 +1,19 @@
 # ninja log v5
 8	865	1660271125106235635	source/opengl-learning/ch01-02-IboTest/CMakeFiles/Ch01-02-IboTest.dir/ibo_test.cpp.o	7e443e237ec1c20b
+3	757	1660363282035436352	Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/Ch01_02_IboTest.dir/IboTest.cpp.o	908f48433dbf4dea
 865	920	1660271125167154000	source/opengl-learning/ch01-02-IboTest/libCh01-02-IboTest.a	fd036d72428c973d
 680	4098	1660204418395560000	libGLAD.a	d14a2721091e82ea
+808	917	1660363282198570136	Source/Run	5fcb091de436a299
 2	449	1660231706887715291	source/opengl-learning/ch1-vbo-test/CMakeFiles/Ch1VboTest.dir/ch1_vbo_test.cpp.o	61c2a9aea0b2c7f4
-7	836	1660267270466725621	source/opengl-learning/ch01-01-VboTest/CMakeFiles/Ch01-01-VboTest.dir/vbo_test.cpp.o	ccab4f08d2d06575
 920	1032	1660271125277876790	source/Run	c634d874e074ffa9
+7	836	1660267270466725621	source/opengl-learning/ch01-01-VboTest/CMakeFiles/Ch01-01-VboTest.dir/vbo_test.cpp.o	ccab4f08d2d06575
 449	507	1660231706950572000	source/opengl-learning/ch1-vbo-test/libCh1VboTest.a	ebac1e6c08539bc
 2	735	1660270841459851880	source/CMakeFiles/Run.dir/main.cpp.o	63a63511958ed22f
 2	785	1660363135547064732	Source/OpenglLearning/CH01_01_VboTest/CMakeFiles/Ch01_01_VboTest.dir/VboTest.cpp.o	7449dfab0db8f5a3
+2	740	1660363282004641330	Source/CMakeFiles/Run.dir/main.cpp.o	24881ddb01c2e35b
 7	680	1660204414969076126	CMakeFiles/GLAD.dir/opt/homebrew/Cellar/glad/src/glad.c.o	c776d310881d2cdc
-3	736	1660363160473245779	Source/CMakeFiles/Run.dir/main.cpp.o	24881ddb01c2e35b
-2	202	1660363277295741393	build.ninja	4d47ffdff8bb6108
-2	779	1660200507797043737	source/CMakeFiles/Run.dir/opt/homebrew/Cellar/glad/src/glad.c.o	de41ec6f42c108fc
 4	99	1660267296590547000	source/opengl-learning/ch01-01-VboTest/libCh01-01-VboTest.a	5f13a2d840e0e3b6
 4	165	1660363159908200000	Source/OpenglLearning/CH01_01_VboTest/libCh01_01_VboTest.a	521e02e3232d3a9e
-2	740	1660363282004641330	Source/CMakeFiles/Run.dir/main.cpp.o	24881ddb01c2e35b
-3	757	1660363282035436352	Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/Ch01_02_IboTest.dir/IboTest.cpp.o	908f48433dbf4dea
+2	779	1660200507797043737	source/CMakeFiles/Run.dir/opt/homebrew/Cellar/glad/src/glad.c.o	de41ec6f42c108fc
+2	202	1660442358248950744	build.ninja	4d47ffdff8bb6108
 757	808	1660363282091745000	Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a	e53f659e964832a
-808	917	1660363282198570136	Source/Run	5fcb091de436a299

@@ -35,7 +35,7 @@
 *.app
 
 # Folder
-./[B]build
+./[Bb]uild
 ./main.dSYM
 .vscode/
 
