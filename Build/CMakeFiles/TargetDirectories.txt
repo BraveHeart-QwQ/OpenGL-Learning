@@ -1,9 +1,0 @@
-/Users/steven/Documents/Repository/OpenGL-Learning/build/CMakeFiles/GLAD.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/CMakeFiles/edit_cache.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/CMakeFiles/rebuild_cache.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/CMakeFiles/Run.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/CMakeFiles/edit_cache.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/CMakeFiles/rebuild_cache.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/Ch01_02_IboTest.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/edit_cache.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/rebuild_cache.dir
