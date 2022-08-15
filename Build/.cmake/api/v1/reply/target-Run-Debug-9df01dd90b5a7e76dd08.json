@@ -85,11 +85,11 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "GLAD::@6890427a1f51a3e7e1df"
+			"id" : "Template_Basic::@1f51671159ef73cb3cb0"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "Ch01_02_IboTest::@0ceb37902c48705e2232"
+			"id" : "GLAD::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "Run::@43690dd2fb94c8e45e84",
@@ -117,7 +117,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a",
+				"fragment" : "Source/Template/1_Basic/libTemplate_Basic.a",
 				"role" : "libraries"
 			},
 			{

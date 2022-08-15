@@ -11,7 +11,7 @@
 },
 {
   "directory": "/Users/steven/Documents/Repository/OpenGL-Learning/build",
-  "command": "/usr/bin/clang++ -I/opt/homebrew/Cellar/glad/include -I/opt/homebrew/Cellar/glfw/3.3.8/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/Ch01_02_IboTest.dir/IboTest.cpp.o -c /Users/steven/Documents/Repository/OpenGL-Learning/Source/OpenglLearning/CH01_02_IboTest/IboTest.cpp",
-  "file": "/Users/steven/Documents/Repository/OpenGL-Learning/Source/OpenglLearning/CH01_02_IboTest/IboTest.cpp"
+  "command": "/usr/bin/clang++ -I/opt/homebrew/Cellar/glad/include -I/opt/homebrew/Cellar/glfw/3.3.8/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o Source/Template/1_Basic/CMakeFiles/Template_Basic.dir/Basic.cpp.o -c /Users/steven/Documents/Repository/OpenGL-Learning/Source/Template/1_Basic/Basic.cpp",
+  "file": "/Users/steven/Documents/Repository/OpenGL-Learning/Source/Template/1_Basic/Basic.cpp"
 }
 ]

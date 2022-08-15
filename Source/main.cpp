@@ -1,11 +1,12 @@
 #include <iostream>
 #include <string>
 
-#include "OpenglLearning/Ch01_02_IboTest/IboTest.hpp"
+#include "Template/1_Basic/Basic.hpp"
 
 using namespace std;
 
 int main(int argc, const char* argv[])
 {
-	ch1_ibo_test::RealMain(argc, argv);
+	gl_template::Basic basic;
+	basic.RealMain(argc, argv);
 }

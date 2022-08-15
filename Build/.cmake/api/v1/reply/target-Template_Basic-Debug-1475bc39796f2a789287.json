@@ -3,7 +3,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a"
+			"path" : "Source/Template/1_Basic/libTemplate_Basic.a"
 		}
 	],
 	"backtrace" : 1,
@@ -17,7 +17,7 @@
 		],
 		"files" : 
 		[
-			"Source/OpenglLearning/CH01_02_IboTest/CMakeLists.txt"
+			"Source/Template/1_Basic/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -89,13 +89,13 @@
 			"id" : "GLAD::@6890427a1f51a3e7e1df"
 		}
 	],
-	"id" : "Ch01_02_IboTest::@0ceb37902c48705e2232",
-	"name" : "Ch01_02_IboTest",
-	"nameOnDisk" : "libCh01_02_IboTest.a",
+	"id" : "Template_Basic::@1f51671159ef73cb3cb0",
+	"name" : "Template_Basic",
+	"nameOnDisk" : "libTemplate_Basic.a",
 	"paths" : 
 	{
-		"build" : "Source/OpenglLearning/CH01_02_IboTest",
-		"source" : "Source/OpenglLearning/CH01_02_IboTest"
+		"build" : "Source/Template/1_Basic",
+		"source" : "Source/Template/1_Basic"
 	},
 	"sourceGroups" : 
 	[
@@ -112,7 +112,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Source/OpenglLearning/CH01_02_IboTest/IboTest.cpp",
+			"path" : "Source/Template/1_Basic/Basic.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

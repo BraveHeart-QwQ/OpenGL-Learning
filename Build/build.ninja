@@ -109,7 +109,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Order-only phony target for Run
 
-build cmake_object_order_depends_target_Run: phony || cmake_object_order_depends_target_Ch01_02_IboTest cmake_object_order_depends_target_GLAD
+build cmake_object_order_depends_target_Run: phony || cmake_object_order_depends_target_GLAD cmake_object_order_depends_target_Template_Basic
 
 build Source/CMakeFiles/Run.dir/main.cpp.o: CXX_COMPILER__Run_Debug /Users/steven/Documents/Repository/OpenGL-Learning/Source/main.cpp || cmake_object_order_depends_target_Run
   DEP_FILE = Source/CMakeFiles/Run.dir/main.cpp.o.d
@@ -126,9 +126,9 @@ build Source/CMakeFiles/Run.dir/main.cpp.o: CXX_COMPILER__Run_Debug /Users/steve
 #############################################
 # Link the executable Source/Run
 
-build Source/Run: CXX_EXECUTABLE_LINKER__Run_Debug Source/CMakeFiles/Run.dir/main.cpp.o | libGLAD.a /opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a libGLAD.a /opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib || Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a libGLAD.a
+build Source/Run: CXX_EXECUTABLE_LINKER__Run_Debug Source/CMakeFiles/Run.dir/main.cpp.o | libGLAD.a /opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib Source/Template/1_Basic/libTemplate_Basic.a libGLAD.a /opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib || Source/Template/1_Basic/libTemplate_Basic.a libGLAD.a
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
-  LINK_LIBRARIES = libGLAD.a  /opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib  Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a  libGLAD.a  /opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib
+  LINK_LIBRARIES = libGLAD.a  /opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib  Source/Template/1_Basic/libTemplate_Basic.a  libGLAD.a  /opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib
   OBJECT_DIR = Source/CMakeFiles/Run.dir
   POST_BUILD = :
   PRE_LINK = :
@@ -165,72 +165,72 @@ build Source/rebuild_cache: phony Source/CMakeFiles/rebuild_cache.util
 # =============================================================================
 
 # =============================================================================
-# Object build statements for STATIC_LIBRARY target Ch01_02_IboTest
+# Object build statements for STATIC_LIBRARY target Template_Basic
 
 
 #############################################
-# Order-only phony target for Ch01_02_IboTest
+# Order-only phony target for Template_Basic
 
-build cmake_object_order_depends_target_Ch01_02_IboTest: phony || cmake_object_order_depends_target_GLAD
+build cmake_object_order_depends_target_Template_Basic: phony || cmake_object_order_depends_target_GLAD
 
-build Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/Ch01_02_IboTest.dir/IboTest.cpp.o: CXX_COMPILER__Ch01_02_IboTest_Debug /Users/steven/Documents/Repository/OpenGL-Learning/Source/OpenglLearning/CH01_02_IboTest/IboTest.cpp || cmake_object_order_depends_target_Ch01_02_IboTest
-  DEP_FILE = Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/Ch01_02_IboTest.dir/IboTest.cpp.o.d
+build Source/Template/1_Basic/CMakeFiles/Template_Basic.dir/Basic.cpp.o: CXX_COMPILER__Template_Basic_Debug /Users/steven/Documents/Repository/OpenGL-Learning/Source/Template/1_Basic/Basic.cpp || cmake_object_order_depends_target_Template_Basic
+  DEP_FILE = Source/Template/1_Basic/CMakeFiles/Template_Basic.dir/Basic.cpp.o.d
   FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17
   INCLUDES = -I/opt/homebrew/Cellar/glad/include -I/opt/homebrew/Cellar/glfw/3.3.8/include
-  OBJECT_DIR = Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/Ch01_02_IboTest.dir
-  OBJECT_FILE_DIR = Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/Ch01_02_IboTest.dir
+  OBJECT_DIR = Source/Template/1_Basic/CMakeFiles/Template_Basic.dir
+  OBJECT_FILE_DIR = Source/Template/1_Basic/CMakeFiles/Template_Basic.dir
 
 
 # =============================================================================
-# Link build statements for STATIC_LIBRARY target Ch01_02_IboTest
+# Link build statements for STATIC_LIBRARY target Template_Basic
 
 
 #############################################
-# Link the static library Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a
+# Link the static library Source/Template/1_Basic/libTemplate_Basic.a
 
-build Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a: CXX_STATIC_LIBRARY_LINKER__Ch01_02_IboTest_Debug Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/Ch01_02_IboTest.dir/IboTest.cpp.o || libGLAD.a
+build Source/Template/1_Basic/libTemplate_Basic.a: CXX_STATIC_LIBRARY_LINKER__Template_Basic_Debug Source/Template/1_Basic/CMakeFiles/Template_Basic.dir/Basic.cpp.o || libGLAD.a
   ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk
   LANGUAGE_COMPILE_FLAGS = -g
-  OBJECT_DIR = Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/Ch01_02_IboTest.dir
+  OBJECT_DIR = Source/Template/1_Basic/CMakeFiles/Template_Basic.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a
-  TARGET_PDB = Ch01_02_IboTest.a.dbg
+  TARGET_FILE = Source/Template/1_Basic/libTemplate_Basic.a
+  TARGET_PDB = Template_Basic.a.dbg
 
 
 #############################################
 # Utility command for edit_cache
 
-build Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/steven/Documents/Repository/OpenGL-Learning/build/Source/OpenglLearning/CH01_02_IboTest && /opt/homebrew/Cellar/cmake/3.22.1/bin/ccmake -S/Users/steven/Documents/Repository/OpenGL-Learning -B/Users/steven/Documents/Repository/OpenGL-Learning/build
+build Source/Template/1_Basic/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Template/1_Basic && /opt/homebrew/Cellar/cmake/3.22.1/bin/ccmake -S/Users/steven/Documents/Repository/OpenGL-Learning -B/Users/steven/Documents/Repository/OpenGL-Learning/build
   DESC = Running CMake cache editor...
   pool = console
   restat = 1
 
-build Source/OpenglLearning/CH01_02_IboTest/edit_cache: phony Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/edit_cache.util
+build Source/Template/1_Basic/edit_cache: phony Source/Template/1_Basic/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd /Users/steven/Documents/Repository/OpenGL-Learning/build/Source/OpenglLearning/CH01_02_IboTest && /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake --regenerate-during-build -S/Users/steven/Documents/Repository/OpenGL-Learning -B/Users/steven/Documents/Repository/OpenGL-Learning/build
+build Source/Template/1_Basic/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Template/1_Basic && /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake --regenerate-during-build -S/Users/steven/Documents/Repository/OpenGL-Learning -B/Users/steven/Documents/Repository/OpenGL-Learning/build
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build Source/OpenglLearning/CH01_02_IboTest/rebuild_cache: phony Source/OpenglLearning/CH01_02_IboTest/CMakeFiles/rebuild_cache.util
+build Source/Template/1_Basic/rebuild_cache: phony Source/Template/1_Basic/CMakeFiles/rebuild_cache.util
 
 # =============================================================================
 # Target aliases.
-
-build Ch01_02_IboTest: phony Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a
 
 build GLAD: phony libGLAD.a
 
 build Run: phony Source/Run
 
-build libCh01_02_IboTest.a: phony Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a
+build Template_Basic: phony Source/Template/1_Basic/libTemplate_Basic.a
+
+build libTemplate_Basic.a: phony Source/Template/1_Basic/libTemplate_Basic.a
 
 # =============================================================================
 # Folder targets.
@@ -247,14 +247,14 @@ build all: phony libGLAD.a Source/all
 #############################################
 # Folder: /Users/steven/Documents/Repository/OpenGL-Learning/build/Source
 
-build Source/all: phony Source/Run Source/OpenglLearning/CH01_02_IboTest/all
+build Source/all: phony Source/Run Source/Template/1_Basic/all
 
 # =============================================================================
 
 #############################################
-# Folder: /Users/steven/Documents/Repository/OpenGL-Learning/build/Source/OpenglLearning/CH01_02_IboTest
+# Folder: /Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Template/1_Basic
 
-build Source/OpenglLearning/CH01_02_IboTest/all: phony Source/OpenglLearning/CH01_02_IboTest/libCh01_02_IboTest.a
+build Source/Template/1_Basic/all: phony Source/Template/1_Basic/libTemplate_Basic.a
 
 # =============================================================================
 # Built-in targets
@@ -263,14 +263,14 @@ build Source/OpenglLearning/CH01_02_IboTest/all: phony Source/OpenglLearning/CH0
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../Source/CMakeLists.txt ../Source/OpenglLearning/CH01_02_IboTest/CMakeLists.txt /Library/glm/cmake/glm/glmConfig-version.cmake /Library/glm/cmake/glm/glmConfig.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/CopyImportedTargetProperties.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-config.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-targets-release.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-targets.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../Source/CMakeLists.txt ../Source/Template/1_Basic/CMakeLists.txt /Library/glm/cmake/glm/glmConfig-version.cmake /Library/glm/cmake/glm/glmConfig.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/CopyImportedTargetProperties.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-config.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-targets-release.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-targets.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../Source/CMakeLists.txt ../Source/OpenglLearning/CH01_02_IboTest/CMakeLists.txt /Library/glm/cmake/glm/glmConfig-version.cmake /Library/glm/cmake/glm/glmConfig.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/CopyImportedTargetProperties.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-config.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-targets-release.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-targets.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../Source/CMakeLists.txt ../Source/Template/1_Basic/CMakeLists.txt /Library/glm/cmake/glm/glmConfig-version.cmake /Library/glm/cmake/glm/glmConfig.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCXXInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeGenericSystem.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeInitializeConfigs.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeLanguageInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/Clang.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Compiler/GNU.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-AppleClang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-AppleClang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang-C.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Apple-Clang.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/Darwin.cmake /opt/homebrew/Cellar/cmake/3.22.1/share/cmake/Modules/Platform/UnixPaths.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/CopyImportedTargetProperties.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-config.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-targets-release.cmake /opt/homebrew/Cellar/glew/2.2.0_1/lib/cmake/glew/glew-targets.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCCompiler.cmake CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################

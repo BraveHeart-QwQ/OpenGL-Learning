@@ -60,7 +60,7 @@ rule CXX_EXECUTABLE_LINKER__Run_Debug
 #############################################
 # Rule for compiling CXX files.
 
-rule CXX_COMPILER__Ch01_02_IboTest_Debug
+rule CXX_COMPILER__Template_Basic_Debug
   depfile = $DEP_FILE
   deps = gcc
   command = /usr/bin/clang++ $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
@@ -70,7 +70,7 @@ rule CXX_COMPILER__Ch01_02_IboTest_Debug
 #############################################
 # Rule for linking CXX static library.
 
-rule CXX_STATIC_LIBRARY_LINKER__Ch01_02_IboTest_Debug
+rule CXX_STATIC_LIBRARY_LINKER__Template_Basic_Debug
   command = $PRE_LINK && /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E rm -f $TARGET_FILE && /usr/bin/ar qc $TARGET_FILE $LINK_FLAGS $in && /usr/bin/ranlib $TARGET_FILE && /opt/homebrew/Cellar/cmake/3.22.1/bin/cmake -E touch $TARGET_FILE && $POST_BUILD
   description = Linking CXX static library $TARGET_FILE
   restat = $RESTAT
