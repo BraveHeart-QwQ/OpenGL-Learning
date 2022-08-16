@@ -3,8 +3,8 @@
 
 namespace gl_template {
 
-const char* DEFAULT_VERTEX_SHADER   = "#version 330 core\nlayout (location = 0) in vec3 aPos;\nvoid main()\n{\ngl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n}\0";
-const char* DEFAULT_FRAGMENT_SHADER = "#version 330 core\nout vec4 FragColor;\nvoid main()\n{\nFragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n}\0";
+const char* Basic::DEFAULT_VERTEX_SHADER   = "#version 330 core\nlayout (location = 0) in vec3 aPos;\nvoid main()\n{\ngl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n}\0";
+const char* Basic::DEFAULT_FRAGMENT_SHADER = "#version 330 core\nout vec4 FragColor;\nvoid main()\n{\nFragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n}\0";
 
 Basic::Basic()
     : Basic(800,
@@ -61,18 +61,18 @@ Basic::Basic(int         window_width,
       _vertex_shader_source(vertex_shader_source),
       _fragment_shader_source(fragment_shader_source)
 {
-	_vertices_size = 12 * sizeof(float);
+	_vertices_size = 16 * sizeof(float);
 	_indices_size  = 6 * sizeof(float);
-
-	_vertices = new float[_vertices_size]{
-	    0.5f, 0.5f, 0.0f,
-	    0.5f, -0.5f, 0.0f,
-	    -0.5f, -0.5f, 0.0f,
-	    -0.5f, 0.5f, 0.0f};
-
+	_vertices      = new float[_vertices_size]{
+        0.5f, 0.5f, 0.0f,
+        0.5f, -0.5f, 0.0f,
+        -0.5f, -0.5f, 0.0f,
+        -0.5f, 0.5f, 0.0f
+	};
 	_indices = new unsigned int[_indices_size]{
-	    0, 1, 3,
-	    1, 2, 3};
+		0, 1, 3,
+		1, 2, 3
+	};
 }
 
 Basic::Basic(int window_width, int window_height, float vertices[], int vertices_size, unsigned int indices[], int indices_size, std::string vertex_shader_source, std::string fragment_shader_source)
@@ -83,7 +83,9 @@ Basic::Basic(int window_width, int window_height, float vertices[], int vertices
       _indices(indices),
       _indices_size(indices_size),
       _vertex_shader_source(vertex_shader_source),
-      _fragment_shader_source(fragment_shader_source) { }
+      _fragment_shader_source(fragment_shader_source)
+{
+}
 
 int Basic::RealMain(int argc, const char* argv[])
 {
@@ -224,7 +226,7 @@ unsigned int Basic::_InitShaderProgram()
 {
 	unsigned int vertex_shader   = _CreateVertexShader(_vertex_shader_source.c_str());
 	unsigned int fragment_shader = _CreateFragmentShader(_fragment_shader_source.c_str());
-	unsigned int shader_program  = _CreateShaderProgram({vertex_shader, fragment_shader});
+	unsigned int shader_program  = _CreateShaderProgram({ vertex_shader, fragment_shader });
 	glUseProgram(shader_program);
 	glDeleteShader(vertex_shader);   // 删除着色器
 	glDeleteShader(fragment_shader); // 删除着色器

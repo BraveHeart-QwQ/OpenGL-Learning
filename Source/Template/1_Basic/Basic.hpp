@@ -4,7 +4,7 @@
 //   Data: 14/8/2022
 //
 // Feature:
-// -[ ] // TODO
+// -[ ] // TODO 写完 Feature 注释
 // -[ ]
 // -[ ]
 //
@@ -22,6 +22,11 @@ namespace gl_template {
 
 class Basic
 {
+	/*-------------------- Public Variable --------------------*/
+public:
+	static const char* DEFAULT_VERTEX_SHADER;
+	static const char* DEFAULT_FRAGMENT_SHADER;
+
 	/*-------------------- Protected Variable --------------------*/
 	/*          [ User Init Config ]          */
 protected:
