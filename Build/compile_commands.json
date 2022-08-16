@@ -11,7 +11,12 @@
 },
 {
   "directory": "/Users/steven/Documents/Repository/OpenGL-Learning/build",
-  "command": "/usr/bin/clang++ -I/opt/homebrew/Cellar/glad/include -I/opt/homebrew/Cellar/glfw/3.3.8/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o Source/Template/1_Basic/CMakeFiles/Template_Basic.dir/Basic.cpp.o -c /Users/steven/Documents/Repository/OpenGL-Learning/Source/Template/1_Basic/Basic.cpp",
+  "command": "/usr/bin/clang++ -I/opt/homebrew/Cellar/glad/include -I/opt/homebrew/Cellar/glfw/3.3.8/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o Source/Practice/LearnOpengl/1_HelloTriangle_1/CMakeFiles/Learngl_Practice_HelloTriangle_1.dir/Practice.cpp.o -c /Users/steven/Documents/Repository/OpenGL-Learning/Source/Practice/LearnOpengl/1_HelloTriangle_1/Practice.cpp",
+  "file": "/Users/steven/Documents/Repository/OpenGL-Learning/Source/Practice/LearnOpengl/1_HelloTriangle_1/Practice.cpp"
+},
+{
+  "directory": "/Users/steven/Documents/Repository/OpenGL-Learning/build",
+  "command": "/usr/bin/clang++ -I/opt/homebrew/Cellar/glad/include -I/opt/homebrew/Cellar/glfw/3.3.8/include -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.1.sdk -std=gnu++17 -o Source/Practice/LearnOpengl/1_HelloTriangle_1/binary_dir/CMakeFiles/Template_Basic.dir/Basic.cpp.o -c /Users/steven/Documents/Repository/OpenGL-Learning/Source/Template/1_Basic/Basic.cpp",
   "file": "/Users/steven/Documents/Repository/OpenGL-Learning/Source/Template/1_Basic/Basic.cpp"
 }
 ]

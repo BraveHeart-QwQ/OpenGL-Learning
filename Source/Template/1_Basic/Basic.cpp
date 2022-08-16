@@ -5,6 +5,16 @@ namespace gl_template {
 
 const char* Basic::DEFAULT_VERTEX_SHADER   = "#version 330 core\nlayout (location = 0) in vec3 aPos;\nvoid main()\n{\ngl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n}\0";
 const char* Basic::DEFAULT_FRAGMENT_SHADER = "#version 330 core\nout vec4 FragColor;\nvoid main()\n{\nFragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n}\0";
+float       Basic::DEFAULT_VERTICES[12]    = {
+    0.5f, 0.5f, 0.0f,
+    0.5f, -0.5f, 0.0f,
+    -0.5f, -0.5f, 0.0f,
+    -0.5f, 0.5f, 0.0f
+};
+unsigned int Basic::DEFAULT_INDICES[6] = {
+	0, 1, 3,
+	1, 2, 3
+};
 
 Basic::Basic()
     : Basic(800,
@@ -48,32 +58,21 @@ Basic::Basic(int          window_width,
             indices,
             indices_size,
             DEFAULT_VERTEX_SHADER,
-            DEFAULT_FRAGMENT_SHADER)
-{
-}
+            DEFAULT_FRAGMENT_SHADER) { }
 
 Basic::Basic(int         window_width,
              int         window_height,
              std::string vertex_shader_source,
              std::string fragment_shader_source)
-    : _window_width(window_width),
-      _window_height(window_height),
-      _vertex_shader_source(vertex_shader_source),
-      _fragment_shader_source(fragment_shader_source)
-{
-	_vertices_size = 16 * sizeof(float);
-	_indices_size  = 6 * sizeof(float);
-	_vertices      = new float[_vertices_size]{
-        0.5f, 0.5f, 0.0f,
-        0.5f, -0.5f, 0.0f,
-        -0.5f, -0.5f, 0.0f,
-        -0.5f, 0.5f, 0.0f
-	};
-	_indices = new unsigned int[_indices_size]{
-		0, 1, 3,
-		1, 2, 3
-	};
-}
+    : Basic(window_width,
+            window_height,
+            DEFAULT_VERTICES,
+            sizeof(DEFAULT_VERTICES),
+            DEFAULT_INDICES,
+            sizeof(DEFAULT_INDICES),
+            vertex_shader_source,
+            fragment_shader_source) { }
+
 
 Basic::Basic(int window_width, int window_height, float vertices[], int vertices_size, unsigned int indices[], int indices_size, std::string vertex_shader_source, std::string fragment_shader_source)
     : _window_width(window_width),
@@ -83,9 +82,7 @@ Basic::Basic(int window_width, int window_height, float vertices[], int vertices
       _indices(indices),
       _indices_size(indices_size),
       _vertex_shader_source(vertex_shader_source),
-      _fragment_shader_source(fragment_shader_source)
-{
-}
+      _fragment_shader_source(fragment_shader_source) { }
 
 int Basic::RealMain(int argc, const char* argv[])
 {
@@ -238,7 +235,7 @@ void Basic::_InitBuffer()
 	glGenVertexArrays(1, &_VAO);
 	glGenBuffers(1, &_VBO);
 	glGenBuffers(1, &_IBO);
-	glBindVertexArray(_VAO);
+	glBindVertexArray(_VAO); // 这里要先绑定 VAO
 	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _IBO);
 }
@@ -254,12 +251,11 @@ void Basic::_InitBufferData()
 void Basic::_InitRenderConfig()
 {
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); // 填充模式（默认）
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // 线框模式
+	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // 线框模式
 }
 
 void Basic::_RenderLoop()
 {
-	// BUG 这里渲染出来的不符合预期
 	while (!glfwWindowShouldClose(_window)) {
 		_UpdateBeforeRender();
 		_UpdateClear();

@@ -1,8 +1,9 @@
 {
+	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "Source/Run"
+			"path" : "Source/Practice/LearnOpengl/1_HelloTriangle_1/libLearngl_Practice_HelloTriangle_1.a"
 		}
 	],
 	"backtrace" : 1,
@@ -10,13 +11,13 @@
 	{
 		"commands" : 
 		[
-			"add_executable",
+			"add_library",
 			"target_link_libraries",
 			"target_include_directories"
 		],
 		"files" : 
 		[
-			"Source/CMakeLists.txt"
+			"Source/Practice/LearnOpengl/1_HelloTriangle_1/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -26,19 +27,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 7,
+				"line" : 4,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 16,
+				"line" : 11,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 12,
+				"line" : 7,
 				"parent" : 0
 			}
 		]
@@ -85,60 +86,20 @@
 	[
 		{
 			"backtrace" : 2,
-			"id" : "Template_Basic::@1f51671159ef73cb3cb0"
+			"id" : "GLAD::@6890427a1f51a3e7e1df"
 		},
 		{
 			"backtrace" : 2,
-			"id" : "GLAD::@6890427a1f51a3e7e1df"
+			"id" : "Template_Basic::@fde3250760835839aaa0"
 		}
 	],
-	"id" : "Run::@43690dd2fb94c8e45e84",
-	"link" : 
-	{
-		"commandFragments" : 
-		[
-			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "",
-				"role" : "flags"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "libGLAD.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "Source/Template/1_Basic/libTemplate_Basic.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "libGLAD.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 2,
-				"fragment" : "/opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib",
-				"role" : "libraries"
-			}
-		],
-		"language" : "CXX"
-	},
-	"name" : "Run",
-	"nameOnDisk" : "Run",
+	"id" : "Learngl_Practice_HelloTriangle_1::@90cafdac6cd440f41cf7",
+	"name" : "Learngl_Practice_HelloTriangle_1",
+	"nameOnDisk" : "libLearngl_Practice_HelloTriangle_1.a",
 	"paths" : 
 	{
-		"build" : "Source",
-		"source" : "Source"
+		"build" : "Source/Practice/LearnOpengl/1_HelloTriangle_1",
+		"source" : "Source/Practice/LearnOpengl/1_HelloTriangle_1"
 	},
 	"sourceGroups" : 
 	[
@@ -155,9 +116,9 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Source/main.cpp",
+			"path" : "Source/Practice/LearnOpengl/1_HelloTriangle_1/Practice.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "EXECUTABLE"
+	"type" : "STATIC_LIBRARY"
 }

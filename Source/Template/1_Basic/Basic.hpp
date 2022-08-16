@@ -24,8 +24,10 @@ class Basic
 {
 	/*-------------------- Public Variable --------------------*/
 public:
-	static const char* DEFAULT_VERTEX_SHADER;
-	static const char* DEFAULT_FRAGMENT_SHADER;
+	static const char*  DEFAULT_VERTEX_SHADER;
+	static const char*  DEFAULT_FRAGMENT_SHADER;
+	static float        DEFAULT_VERTICES[12];
+	static unsigned int DEFAULT_INDICES[6];
 
 	/*-------------------- Protected Variable --------------------*/
 	/*          [ User Init Config ]          */
@@ -83,6 +85,8 @@ public:
 	      int          indices_size,
 	      std::string  vertex_shader_source,
 	      std::string  fragment_shader_source);
+
+	//~Basic(); // FIXIT 声明定义析构函数，释放资源（如：_vertices）
 
 	/*          [ User Interface ]          */
 public:

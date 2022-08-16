@@ -8,7 +8,7 @@
 	"installers" : [],
 	"paths" : 
 	{
-		"build" : "Source/Template/1_Basic",
+		"build" : "Source/Practice/LearnOpengl/1_HelloTriangle_1/binary_dir",
 		"source" : "Source/Template/1_Basic"
 	}
 }

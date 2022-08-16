@@ -4,6 +4,9 @@
 /Users/steven/Documents/Repository/OpenGL-Learning/build/Source/CMakeFiles/Run.dir
 /Users/steven/Documents/Repository/OpenGL-Learning/build/Source/CMakeFiles/edit_cache.dir
 /Users/steven/Documents/Repository/OpenGL-Learning/build/Source/CMakeFiles/rebuild_cache.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Template/1_Basic/CMakeFiles/Template_Basic.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Template/1_Basic/CMakeFiles/edit_cache.dir
-/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Template/1_Basic/CMakeFiles/rebuild_cache.dir
+/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Practice/LearnOpengl/1_HelloTriangle_1/CMakeFiles/Learngl_Practice_HelloTriangle_1.dir
+/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Practice/LearnOpengl/1_HelloTriangle_1/CMakeFiles/edit_cache.dir
+/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Practice/LearnOpengl/1_HelloTriangle_1/CMakeFiles/rebuild_cache.dir
+/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Practice/LearnOpengl/1_HelloTriangle_1/binary_dir/CMakeFiles/Template_Basic.dir
+/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Practice/LearnOpengl/1_HelloTriangle_1/binary_dir/CMakeFiles/edit_cache.dir
+/Users/steven/Documents/Repository/OpenGL-Learning/build/Source/Practice/LearnOpengl/1_HelloTriangle_1/binary_dir/CMakeFiles/rebuild_cache.dir

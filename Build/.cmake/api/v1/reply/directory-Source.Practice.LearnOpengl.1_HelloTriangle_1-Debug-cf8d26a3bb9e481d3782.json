@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "Source/Practice/LearnOpengl/1_HelloTriangle_1",
+		"source" : "Source/Practice/LearnOpengl/1_HelloTriangle_1"
+	}
+}
