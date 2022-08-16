@@ -61,8 +61,8 @@ Basic::Basic(int         window_width,
       _vertex_shader_source(vertex_shader_source),
       _fragment_shader_source(fragment_shader_source)
 {
-	_vertices_size = 12;
-	_indices_size  = 6;
+	_vertices_size = 12 * sizeof(float);
+	_indices_size  = 6 * sizeof(float);
 
 	_vertices = new float[_vertices_size]{
 	    0.5f, 0.5f, 0.0f,
@@ -91,7 +91,7 @@ int Basic::RealMain(int argc, const char* argv[])
 
 	_window = _InitWindow("LearnOpenGL", NULL, NULL);
 
-	if (_InitGlad() == false) return -1;
+	if (_InitGlad() == false) return -1; // 这个一定要放在 _InitWindow 后面
 
 	_InitViewPort();
 
@@ -233,9 +233,9 @@ unsigned int Basic::_InitShaderProgram()
 
 void Basic::_InitBuffer()
 {
+	glGenVertexArrays(1, &_VAO);
 	glGenBuffers(1, &_VBO);
 	glGenBuffers(1, &_IBO);
-	glGenVertexArrays(1, &_VAO);
 	glBindVertexArray(_VAO);
 	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _IBO);
@@ -279,6 +279,9 @@ void Basic::_UpdateClear()
 
 void Basic::_UpdateRender()
 {
+	glUseProgram(_shader_program);
+	glBindVertexArray(_VAO);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _IBO);
 	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 }
 
