@@ -1,6 +1,6 @@
 # Add Subdirectory
-# CRITICAL 通过改动这里来修改编译
-add_subdirectory("OpenglLearning/CH01_02_IboTest")
+# NOTE 通过改动这里来修改编译
+add_subdirectory("Practice/LearnOpengl/1_HelloTriangle_1")
 
 
 # Add Executable
@@ -17,5 +17,5 @@ target_link_libraries(Run
     PRIVATE
         ${LIB_GLAD}
         ${LIB_GLFW}
-        Ch01_02_IboTest # CRITICAL 通过改动这里来修改编译
+        Learngl_Practice_HelloTriangle_1 # NOTE 通过改动这里来修改编译
 )
