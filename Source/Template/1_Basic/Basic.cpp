@@ -88,13 +88,13 @@ int Basic::RealMain(int argc, const char* argv[])
 {
 	_InitGLFW();
 
-	_window = _InitWindow("LearnOpenGL", NULL, NULL);
+	_InitWindow("LearnOpenGL", NULL, NULL);
 
 	if (_InitGlad() == false) return -1; // 这个一定要放在 _InitWindow 后面
 
 	_InitViewPort();
 
-	_shader_program = _InitShaderProgram();
+	_InitShaderProgram();
 
 	_InitBuffer();
 
@@ -141,16 +141,14 @@ bool Basic::_InitGlad()
 	return true;
 }
 
-GLFWwindow* Basic::_InitWindow(const char* title, GLFWmonitor* monitor, GLFWwindow* share)
+void Basic::_InitWindow(const char* title, GLFWmonitor* monitor, GLFWwindow* share)
 {
-	GLFWwindow* window = glfwCreateWindow(_window_width, _window_height, title, monitor, share);
-	if (window == NULL) {
+	_window = glfwCreateWindow(_window_width, _window_height, title, monitor, share);
+	if (_window == NULL) {
 		std::cerr << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();
-		return nullptr;
 	}
-	glfwMakeContextCurrent(window);
-	return window;
+	glfwMakeContextCurrent(_window);
 }
 
 void Basic::_InitViewPort()
@@ -219,15 +217,15 @@ unsigned int Basic::_CreateShaderProgram(std::initializer_list<unsigned int> sha
 	return shader_program;
 }
 
-unsigned int Basic::_InitShaderProgram()
+void Basic::_InitShaderProgram()
 {
 	unsigned int vertex_shader   = _CreateVertexShader(_vertex_shader_source.c_str());
 	unsigned int fragment_shader = _CreateFragmentShader(_fragment_shader_source.c_str());
-	unsigned int shader_program  = _CreateShaderProgram({ vertex_shader, fragment_shader });
-	glUseProgram(shader_program);
+
+	_shader_program = _CreateShaderProgram({ vertex_shader, fragment_shader });
+
 	glDeleteShader(vertex_shader);   // 删除着色器
 	glDeleteShader(fragment_shader); // 删除着色器
-	return shader_program;
 }
 
 void Basic::_InitBuffer()

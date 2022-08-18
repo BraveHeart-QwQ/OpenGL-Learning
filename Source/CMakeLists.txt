@@ -18,6 +18,5 @@ target_link_libraries(Run
     PRIVATE
         ${LIB_GLAD}
         ${LIB_GLFW}
-        Template_Basic # NOTE 通过改动这里来修改编译
-        Learngl_Practice_HelloTriangle_2
+        Learngl_Practice_HelloTriangle_2 # NOTE 通过改动这里来修改编译
 )

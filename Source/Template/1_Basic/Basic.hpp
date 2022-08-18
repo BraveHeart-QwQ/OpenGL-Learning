@@ -19,6 +19,7 @@
 
 namespace gl_template {
 
+// TODO 提供接口动态读写 User Init Data
 class Basic
 {
 	/*-------------------- Public Variable --------------------*/
@@ -96,16 +97,16 @@ public:
 	/*-------------------- Protected Method --------------------*/
 	/*          [ RealMain Template Method ]          */
 protected:
-	virtual void         _InitGLFW();
-	virtual GLFWwindow*  _InitWindow(const char* title, GLFWmonitor* monitor, GLFWwindow* share);
-	virtual bool         _InitGlad();
-	virtual void         _InitViewPort();
-	virtual unsigned int _InitShaderProgram();
-	virtual void         _InitBuffer();
-	virtual void         _InitBufferData();
-	virtual void         _InitRenderConfig();
-	virtual void         _RenderLoop();
-	virtual void         _Terminal();
+	virtual void _InitGLFW();
+	virtual void _InitWindow(const char* title, GLFWmonitor* monitor, GLFWwindow* share);
+	virtual bool _InitGlad();
+	virtual void _InitViewPort();
+	virtual void _InitShaderProgram();
+	virtual void _InitBuffer();
+	virtual void _InitBufferData();
+	virtual void _InitRenderConfig();
+	virtual void _RenderLoop();
+	virtual void _Terminal();
 
 	/*          [ _InitShaderProgram Template Method ]          */
 	virtual unsigned int _CreateVertexShader(const char* shader_source);

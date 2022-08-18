@@ -8,8 +8,8 @@ using namespace std;
 
 int main(int argc, const char* argv[])
 {
-	//learngl_practice::DrawTwoTriangleInDiffVAOVBO foobar;
-	gl_template::Basic foobar;
+	learngl_practice::DrawTwoTriangleInDiffVAOVBO foobar;
+	//gl_template::Basic foobar;
 
 	foobar.RealMain(argc, argv);
 }

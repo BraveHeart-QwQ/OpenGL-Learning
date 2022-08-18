@@ -3,6 +3,15 @@
 
 namespace learngl_practice {
 
+float DrawTwoTriangleInDiffVAOVBO::VERTICES[18] = {
+	-0.75f, -0.5f, 0.0f,
+	-0.25f, -0.5f, 0.0f,
+	-0.25f, 0.5f, 0.0f,
+	0.25f, -0.5f, 0.0f,
+	0.75f, -0.5f, 0.0f,
+	0.75f, 0.5f, 0.0f
+};
+
 void DrawTwoTriangleInDiffVAOVBO::_InitBuffer()
 {
 	glGenVertexArrays(2, __vaos); // CRITICAL 同时生成多个 vao 和 vbo，注意这里不需要用`&`，因为数组可以自动转为指针
@@ -14,7 +23,7 @@ void DrawTwoTriangleInDiffVAOVBO::_InitBufferData()
 	/* 绑定第一套 vao、vbo 的数据 */
 	glBindVertexArray(__vaos[0]);
 	glBindBuffer(GL_ARRAY_BUFFER, __vbos[0]);
-	glBufferData(GL_ARRAY_BUFFER, _vertices_size, _vertices, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, 3 * 3 * sizeof(float), &VERTICES[0], GL_STATIC_DRAW); // 使用前三个点的数据
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 	//glBindVertexArray(0); // 这行代码可以取消 vao 的绑定，但没必要
@@ -22,7 +31,7 @@ void DrawTwoTriangleInDiffVAOVBO::_InitBufferData()
 	/* 绑定第二套 vao、vbo 的数据 */
 	glBindVertexArray(__vaos[1]);
 	glBindBuffer(GL_ARRAY_BUFFER, __vbos[1]);
-	glBufferData(GL_ARRAY_BUFFER, _vertices_size, _vertices, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, 3 * 3 * sizeof(float), &VERTICES[3 * 3], GL_STATIC_DRAW); // 使用后三个点的数据
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 }
