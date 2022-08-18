@@ -3,10 +3,9 @@
 // Author: Hxx
 //   Data: 14/8/2022
 //
-// Feature:
-// -[ ] // TODO 写完 Feature 注释
-// -[ ]
-// -[ ]
+// Description:
+// 基于虚函数的模版方法模式，可以通过继承来替换 OpenGL 的一些抽象步骤的实现，这个类展示了
+// 基础情况下的 OpenGL 使用步骤。
 //
 //------------------------------------------------------------------------------
 
@@ -30,7 +29,7 @@ public:
 	static unsigned int DEFAULT_INDICES[6];
 
 	/*-------------------- Protected Variable --------------------*/
-	/*          [ User Init Config ]          */
+	/*          [ User Init Data ]          */
 protected:
 	int           _window_width;
 	int           _window_height;
@@ -86,7 +85,7 @@ public:
 	      std::string  vertex_shader_source,
 	      std::string  fragment_shader_source);
 
-	//~Basic(); // FIXIT 声明定义析构函数，释放资源（如：_vertices）
+	//~Basic(); // NOTE 本类没有使用 new 来获取资源，默认数据都存在栈上
 
 	/*          [ User Interface ]          */
 public:
