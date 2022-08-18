@@ -1,6 +1,7 @@
 # Add Subdirectory
 # NOTE 通过改动这里来修改编译
-add_subdirectory("Practice/LearnOpengl/1_HelloTriangle_1")
+add_subdirectory("Practice/LearnOpengl/1_HelloTriangle_2")
+#add_subdirectory("Template/1_Basic")
 
 
 # Add Executable
@@ -17,5 +18,6 @@ target_link_libraries(Run
     PRIVATE
         ${LIB_GLAD}
         ${LIB_GLFW}
-        Learngl_Practice_HelloTriangle_1 # NOTE 通过改动这里来修改编译
+        Template_Basic # NOTE 通过改动这里来修改编译
+        Learngl_Practice_HelloTriangle_2
 )

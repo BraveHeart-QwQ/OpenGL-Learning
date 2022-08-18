@@ -15,12 +15,12 @@ void DrawMoreTriangle::_InitBuffer()
 {
 	glGenVertexArrays(1, &_VAO);
 	glGenBuffers(1, &_VBO);
-	glBindVertexArray(_VAO); // 这里要先绑定 VAO
-	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
 }
 
 void DrawMoreTriangle::_InitBufferData()
 {
+	glBindVertexArray(_VAO); // 这里要先绑定 VAO
+	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
 	glBufferData(GL_ARRAY_BUFFER, sizeof(VERTICES), VERTICES, GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);

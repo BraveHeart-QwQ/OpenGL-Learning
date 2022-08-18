@@ -235,13 +235,14 @@ void Basic::_InitBuffer()
 	glGenVertexArrays(1, &_VAO);
 	glGenBuffers(1, &_VBO);
 	glGenBuffers(1, &_IBO);
-	glBindVertexArray(_VAO); // 这里要先绑定 VAO
-	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _IBO);
 }
 
 void Basic::_InitBufferData()
 {
+	// NOTE Bind 属于拷贝数据的一部分（而不是初始化）
+	glBindVertexArray(_VAO); // 这里要先绑定 VAO
+	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _IBO);
 	glBufferData(GL_ARRAY_BUFFER, _vertices_size, _vertices, GL_STATIC_DRAW);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, _indices_size, _indices, GL_STATIC_DRAW);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
@@ -285,8 +286,8 @@ void Basic::_UpdateRender()
 
 void Basic::_UpdateAfterRender()
 {
-	glfwPollEvents();         // 调用事件
 	glfwSwapBuffers(_window); // 交换缓冲
+	glfwPollEvents();         // 调用事件
 }
 
 void Basic::_Terminal()

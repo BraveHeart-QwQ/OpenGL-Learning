@@ -15,7 +15,6 @@
 #ifndef LEARNGL_PRACTICE_HELLOTRIANGLE_1
 #define LEARNGL_PRACTICE_HELLOTRIANGLE_1
 
-#include <array>
 #include "../../../Template/1_Basic/Basic.hpp"
 
 namespace learngl_practice {
