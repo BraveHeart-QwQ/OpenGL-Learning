@@ -26,7 +26,7 @@ class Basic
 public:
 	static const char*  DEFAULT_VERTEX_SHADER;
 	static const char*  DEFAULT_FRAGMENT_SHADER;
-	static float        DEFAULT_VERTICES[12];
+	static float        DEFAULT_VERTICES[18];
 	static unsigned int DEFAULT_INDICES[6];
 
 	/*-------------------- Protected Variable --------------------*/

@@ -5,15 +5,17 @@ namespace gl_template {
 
 const char* Basic::DEFAULT_VERTEX_SHADER   = "#version 330 core\nlayout (location = 0) in vec3 aPos;\nvoid main()\n{\ngl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n}\0";
 const char* Basic::DEFAULT_FRAGMENT_SHADER = "#version 330 core\nout vec4 FragColor;\nvoid main()\n{\nFragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n}\0";
-float       Basic::DEFAULT_VERTICES[12]    = {
-    0.5f, 0.5f, 0.0f,
-    0.5f, -0.5f, 0.0f,
-    -0.5f, -0.5f, 0.0f,
-    -0.5f, 0.5f, 0.0f
+float       Basic::DEFAULT_VERTICES[18]    = {
+    -0.75f, -0.5f, 0.0f,
+    -0.25f, -0.5f, 0.0f,
+    -0.25f, 0.5f, 0.0f,
+    0.25f, -0.5f, 0.0f,
+    0.75f, -0.5f, 0.0f,
+    0.75f, 0.5f, 0.0f
 };
 unsigned int Basic::DEFAULT_INDICES[6] = {
-	0, 1, 3,
-	1, 2, 3
+	0, 1, 2,
+	3, 4, 5
 };
 
 Basic::Basic()
