@@ -25,7 +25,6 @@ public:
 	static float VERTICES[18];
 
 protected:
-	void _InitBuffer() override;
 	void _InitBufferData() override;
 	void _UpdateRender() override;
 };

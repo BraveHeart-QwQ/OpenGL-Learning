@@ -4,9 +4,9 @@
 //   Data: 18/8/2022
 //
 // Feature:
-// -[ ] 写一个新的 fragment shader，输出黄色图形
-// -[ ] 初始化两个 shader program，第二个用新的 fragment shader
-// -[ ] 绘制两个三角形，让第二个输出为黄色
+// -[x] 写一个新的 fragment shader，输出黄色图形
+// -[x] 初始化两个 shader program，第二个用新的 fragment shader
+// -[x] 绘制两个三角形，让第二个输出为黄色（用 glDrawArray 划分两个图形，避免新的 VAO 和 VBO）
 //
 //------------------------------------------------------------------------------
 #ifndef LEARNGL_PRACTICE_HELLOTRIANGLE_3
@@ -28,6 +28,7 @@ private:
 
 protected:
 	void _InitShaderProgram() override;
+	void _UpdateRender() override;
 
 	//void _InitBuffer() override;
 	//void _InitBufferData() override;
