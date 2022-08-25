@@ -3,8 +3,8 @@
 ## CRITICAL Add Template Library
 add_subdirectory("Template")
 add_subdirectory("Practice/LearnOpengl/Chapter1")
-add_subdirectory("OpenglLearning/Chapter1")
-add_subdirectory("OpenglLearning/Chapter2")
+add_subdirectory("Tutorial/LearnOpenGL/Chapter1")
+add_subdirectory("Tutorial/LearnOpenGL/Chapter2")
 
 
 # Add Executable

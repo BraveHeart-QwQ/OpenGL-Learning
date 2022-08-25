@@ -7,7 +7,7 @@
 //#include "Practice/LearnOpengl/Chapter1/DrawMoreTriangle.hpp"
 //#include "Practice/LearnOpengl/Chapter1/DrawTwoTriangleInDiffVAOVBO.hpp"
 //#include "Practice/LearnOpengl/Chapter1/DuoShaderProgram.hpp"
-#include "OpenglLearning/Chapter2/FragmentInterpolation.hpp"
+#include "Tutorial/LearnOpenGL/Chapter2/FragmentInterpolation.hpp"
 
 
 using namespace std;
