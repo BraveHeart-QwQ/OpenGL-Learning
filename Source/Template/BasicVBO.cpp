@@ -1,92 +1,78 @@
-#include "Basic.hpp"
+#include "BasicVBO.hpp"
 #include <iostream>
 
 namespace gl_template {
 
-const char* Basic::DEFAULT_VERTEX_SHADER   = "#version 330 core\nlayout (location = 0) in vec3 aPos;\nvoid main()\n{\ngl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n}\0";
-const char* Basic::DEFAULT_FRAGMENT_SHADER = "#version 330 core\nout vec4 FragColor;\nvoid main()\n{\nFragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n}\0";
-float       Basic::DEFAULT_VERTICES[18]    = {
-    -0.75f, -0.5f, 0.0f,
-    -0.25f, -0.5f, 0.0f,
-    -0.25f, 0.5f, 0.0f,
-    0.25f, -0.5f, 0.0f,
-    0.75f, -0.5f, 0.0f,
-    0.75f, 0.5f, 0.0f
-};
-unsigned int Basic::DEFAULT_INDICES[6] = {
-	0, 1, 2,
-	3, 4, 5
+const char* BasicVBO::DEFAULT_VERTEX_SHADER   = "#version 330 core\nlayout (location = 0) in vec3 aPos;\nvoid main()\n{\ngl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n}\0";
+const char* BasicVBO::DEFAULT_FRAGMENT_SHADER = "#version 330 core\nout vec4 FragColor;\nvoid main()\n{\nFragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n}\0";
+float       BasicVBO::DEFAULT_VERTICES[18]    = {
+    -0.75f, -0.2165f, 0.0f,
+    -0.25f, -0.2165f, 0.0f,
+    -0.5f, 0.2165f, 0.0f,
+    0.25f, -0.2165f, 0.0f,
+    0.75f, -0.2165f, 0.0f,
+    0.5f, 0.2165f, 0.0f
 };
 
-Basic::Basic()
-    : Basic(800,
-            600,
-            DEFAULT_VERTEX_SHADER,
-            DEFAULT_FRAGMENT_SHADER) { }
+BasicVBO::BasicVBO()
+    : BasicVBO(600, 600) { }
 
-Basic::Basic(int window_width, int window_height)
-    : Basic(window_width,
-            window_height,
-            DEFAULT_VERTEX_SHADER,
-            DEFAULT_FRAGMENT_SHADER) { }
+BasicVBO::BasicVBO(int window_width,
+                   int window_height)
+    : BasicVBO(window_width,
+               window_height,
+               DEFAULT_VERTICES,
+               sizeof(DEFAULT_VERTICES)) { }
 
-Basic::Basic(std::string vertex_shader_source, std::string fragment_shader_source)
-    : Basic(800,
-            600,
-            vertex_shader_source,
-            fragment_shader_source) { }
+BasicVBO::BasicVBO(const std::string& vertex_shader_source,
+                   const std::string& fragment_shader_source)
+    : BasicVBO(600,
+               600,
+               vertex_shader_source,
+               fragment_shader_source) { }
 
-Basic::Basic(float        vertices[],
-             int          vertices_size,
-             unsigned int indices[],
-             int          indices_size)
-    : Basic(800,
-            600,
-            vertices,
-            vertices_size,
-            indices,
-            indices_size) { }
+BasicVBO::BasicVBO(float vertices[], unsigned int vertices_size)
+    : BasicVBO(600,
+               600,
+               vertices,
+               vertices_size) { }
 
-Basic::Basic(int          window_width,
-             int          window_height,
-             float        vertices[],
-             int          vertices_size,
-             unsigned int indices[],
-             int          indices_size)
-    : Basic(window_width,
-            window_height,
-            vertices,
-            vertices_size,
-            indices,
-            indices_size,
-            DEFAULT_VERTEX_SHADER,
-            DEFAULT_FRAGMENT_SHADER) { }
+BasicVBO::BasicVBO(int          window_width,
+                   int          window_height,
+                   float        vertices[],
+                   unsigned int vertices_size)
+    : BasicVBO(window_width,
+               window_height,
+               vertices,
+               vertices_size,
+               DEFAULT_VERTEX_SHADER,
+               DEFAULT_FRAGMENT_SHADER) { }
 
-Basic::Basic(int         window_width,
-             int         window_height,
-             std::string vertex_shader_source,
-             std::string fragment_shader_source)
-    : Basic(window_width,
-            window_height,
-            DEFAULT_VERTICES,
-            sizeof(DEFAULT_VERTICES),
-            DEFAULT_INDICES,
-            sizeof(DEFAULT_INDICES),
-            vertex_shader_source,
-            fragment_shader_source) { }
+BasicVBO::BasicVBO(int                window_width,
+                   int                window_height,
+                   const std::string& vertex_shader_source,
+                   const std::string& fragment_shader_source)
+    : BasicVBO(window_width,
+               window_height,
+               DEFAULT_VERTICES,
+               sizeof(DEFAULT_VERTICES),
+               vertex_shader_source,
+               fragment_shader_source) { }
 
-
-Basic::Basic(int window_width, int window_height, float vertices[], int vertices_size, unsigned int indices[], int indices_size, std::string vertex_shader_source, std::string fragment_shader_source)
+BasicVBO::BasicVBO(int                window_width,
+                   int                window_height,
+                   float              vertices[],
+                   unsigned int       vertices_size,
+                   const std::string& vertex_shader_source,
+                   const std::string& fragment_shader_source)
     : _window_width(window_width),
       _window_height(window_height),
       _vertices(vertices),
       _vertices_size(vertices_size),
-      _indices(indices),
-      _indices_size(indices_size),
       _vertex_shader_source(vertex_shader_source),
       _fragment_shader_source(fragment_shader_source) { }
 
-int Basic::RealMain(int argc, const char* argv[])
+int BasicVBO::RealMain(int argc, const char* argv[])
 {
 	_InitGLFW();
 
@@ -111,18 +97,18 @@ int Basic::RealMain(int argc, const char* argv[])
 	return 0;
 }
 
-void Basic::FramebufferSizeCallback(GLFWwindow* window, int width, int height)
+void BasicVBO::FramebufferSizeCallback(GLFWwindow* window, int width, int height)
 {
 	glViewport(0, 0, width, height);
 }
 
-void Basic::UpdateProcessInput(GLFWwindow* window)
+void BasicVBO::UpdateProcessInput(GLFWwindow* window)
 {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true); // 如果按下 ESC，就关闭窗口
 }
 
-void Basic::_InitGLFW()
+void BasicVBO::_InitGLFW()
 {
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); // 限定 OpenGL 版本
@@ -133,17 +119,18 @@ void Basic::_InitGLFW()
 #endif
 }
 
-bool Basic::_InitGlad()
+bool BasicVBO::_InitGlad()
 {
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) { // 传入 GLFW 指针以初始化 GLAD
-		std::cout << "Failed to initialize GLAD" << std::endl;
+		std::cerr << "Failed to initialize GLAD" << std::endl;
+		glfwTerminate();
 		return false;
 	}
 
 	return true;
 }
 
-void Basic::_InitWindow(const char* title, GLFWmonitor* monitor, GLFWwindow* share)
+void BasicVBO::_InitWindow(const char* title, GLFWmonitor* monitor, GLFWwindow* share)
 {
 	_window = glfwCreateWindow(_window_width, _window_height, title, monitor, share);
 	if (_window == NULL) {
@@ -153,13 +140,13 @@ void Basic::_InitWindow(const char* title, GLFWmonitor* monitor, GLFWwindow* sha
 	glfwMakeContextCurrent(_window);
 }
 
-void Basic::_InitViewPort()
+void BasicVBO::_InitViewPort()
 {
 	glViewport(0, 0, _window_width, _window_height);
-	glfwSetFramebufferSizeCallback(_window, Basic::FramebufferSizeCallback);
+	glfwSetFramebufferSizeCallback(_window, BasicVBO::FramebufferSizeCallback);
 }
 
-unsigned int Basic::_CreateVertexShader(const char* shader_source)
+unsigned int BasicVBO::_CreateVertexShader(const char* shader_source)
 {
 	/* 插入 Vertex Shader */
 	unsigned int vertex_shader = glCreateShader(GL_VERTEX_SHADER); // 创建一个 Vertex Shader
@@ -172,14 +159,14 @@ unsigned int Basic::_CreateVertexShader(const char* shader_source)
 	glGetShaderiv(vertex_shader, GL_COMPILE_STATUS, &success);
 	if (!success) {
 		glGetShaderInfoLog(vertex_shader, 512, NULL, info_log);
-		std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n"
+		std::cerr << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n"
 		          << info_log << std::endl;
 	}
 
 	return vertex_shader;
 }
 
-unsigned int Basic::_CreateFragmentShader(const char* shader_source)
+unsigned int BasicVBO::_CreateFragmentShader(const char* shader_source)
 {
 	/* 插入 Fragment Shader */
 	unsigned int fragment_shader = glCreateShader(GL_FRAGMENT_SHADER);
@@ -199,7 +186,7 @@ unsigned int Basic::_CreateFragmentShader(const char* shader_source)
 	return fragment_shader;
 }
 
-unsigned int Basic::_CreateShaderProgram(std::initializer_list<unsigned int> shader_li)
+unsigned int BasicVBO::_CreateShaderProgram(std::initializer_list<unsigned int> shader_li)
 {
 	unsigned int shader_program = glCreateProgram();
 	std::for_each(shader_li.begin(), shader_li.end(), [shader_program](unsigned int i) {
@@ -212,14 +199,14 @@ unsigned int Basic::_CreateShaderProgram(std::initializer_list<unsigned int> sha
 	glGetProgramiv(shader_program, GL_LINK_STATUS, &success);
 	if (!success) {
 		glGetProgramInfoLog(shader_program, 512, NULL, info_log);
-		std::cout << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n"
+		std::cerr << "ERROR::SHADER::PROGRAM::LINKING_FAILED\n"
 		          << info_log << std::endl;
 	}
 
 	return shader_program;
 }
 
-void Basic::_InitShaderProgram()
+void BasicVBO::_InitShaderProgram()
 {
 	unsigned int vertex_shader   = _CreateVertexShader(_vertex_shader_source.c_str());
 	unsigned int fragment_shader = _CreateFragmentShader(_fragment_shader_source.c_str());
@@ -230,34 +217,31 @@ void Basic::_InitShaderProgram()
 	glDeleteShader(fragment_shader); // 删除着色器
 }
 
-void Basic::_InitBuffer()
+void BasicVBO::_InitBuffer()
 {
 	glGenVertexArrays(1, &_VAO);
 	glGenBuffers(1, &_VBO);
-	glGenBuffers(1, &_IBO);
 }
 
-void Basic::_InitBufferData()
+void BasicVBO::_InitBufferData()
 {
 	// NOTE Bind 属于拷贝数据的一部分（而不是初始化）
 	glBindVertexArray(_VAO); // 这里要先绑定 VAO
 	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _IBO);
 
 	glBufferData(GL_ARRAY_BUFFER, _vertices_size, _vertices, GL_STATIC_DRAW);
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, _indices_size, _indices, GL_STATIC_DRAW);
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 }
 
-void Basic::_InitRenderConfig()
+void BasicVBO::_InitRenderConfig()
 {
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); // 填充模式（默认）
 	//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); // 线框模式
 }
 
-void Basic::_RenderLoop()
+void BasicVBO::_RenderLoop()
 {
 	while (!glfwWindowShouldClose(_window)) {
 		_UpdateBeforeRender();
@@ -267,32 +251,31 @@ void Basic::_RenderLoop()
 	}
 }
 
-void Basic::_UpdateBeforeRender()
+void BasicVBO::_UpdateBeforeRender()
 {
 	UpdateProcessInput(_window); // Handle Input
 }
 
-void Basic::_UpdateClear()
+void BasicVBO::_UpdateClear()
 {
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f); // 设置无色区域的默认颜色
 	glClear(GL_COLOR_BUFFER_BIT);         // 清空缓冲区的某个缓冲
 }
 
-void Basic::_UpdateRender()
+void BasicVBO::_UpdateRender()
 {
 	glUseProgram(_shader_program);
 	glBindVertexArray(_VAO);
-	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _IBO);
-	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+	glDrawArrays(GL_TRIANGLES, 0, 6);
 }
 
-void Basic::_UpdateAfterRender()
+void BasicVBO::_UpdateAfterRender()
 {
 	glfwSwapBuffers(_window); // 交换缓冲
 	glfwPollEvents();         // 调用事件
 }
 
-void Basic::_Terminal()
+void BasicVBO::_Terminal()
 {
 	/* （可选）手动返还资源 */
 	//glDeleteVertexArrays(1, &_VAO);

@@ -4,7 +4,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
-namespace ch1_ibo_test {
+namespace learngl_ch1 {
 
 /// @brief 重制窗口大小回调
 void FramebufferSizeCallback(GLFWwindow* window, int width, int height);
@@ -15,6 +15,6 @@ void ProcessInput(GLFWwindow* window);
 /// @brief 在 main 中调用
 int RealMain(int argc, const char* argv[]);
 
-} // namespace ch1_ibo_test
+} // namespace learngl_ch1
 
 #endif

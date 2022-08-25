@@ -1,4 +1,4 @@
-#include "Practice.hpp"
+#include "DuoShaderProgram.hpp"
 #include <iostream>
 
 namespace learngl_practice {

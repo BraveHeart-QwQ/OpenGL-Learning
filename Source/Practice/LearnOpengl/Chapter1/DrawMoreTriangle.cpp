@@ -1,4 +1,4 @@
-#include "Practice.hpp"
+#include "DrawMoreTriangle.hpp"
 
 namespace learngl_practice {
 

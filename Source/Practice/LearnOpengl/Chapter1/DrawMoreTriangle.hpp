@@ -15,11 +15,11 @@
 #ifndef LEARNGL_PRACTICE_HELLOTRIANGLE_1
 #define LEARNGL_PRACTICE_HELLOTRIANGLE_1
 
-#include "../../../Template/1_Basic/Basic.hpp"
+#include "../../../Template/BasicVBO.hpp"
 
 namespace learngl_practice {
 
-class DrawMoreTriangle : public gl_template::Basic
+class DrawMoreTriangle : public gl_template::BasicVBO
 {
 public:
 	static float VERTICES[18];

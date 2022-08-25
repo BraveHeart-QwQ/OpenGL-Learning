@@ -1,4 +1,4 @@
-#include "Practice.hpp"
+#include "DrawTwoTriangleInDiffVAOVBO.hpp"
 #include <iostream>
 
 namespace learngl_practice {

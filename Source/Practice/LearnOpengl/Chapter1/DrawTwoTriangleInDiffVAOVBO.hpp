@@ -10,13 +10,13 @@
 #ifndef LEARNGL_PRACTICE_HELLOTRIANGLE_2
 #define LEARNGL_PRACTICE_HELLOTRIANGLE_2
 
-#include "../../../Template/1_Basic/Basic.hpp"
+#include "../../../Template/BasicVBO.hpp"
 
 namespace learngl_practice {
 
 using namespace std;
 
-class DrawTwoTriangleInDiffVAOVBO final : public gl_template::Basic
+class DrawTwoTriangleInDiffVAOVBO final : public gl_template::BasicVBO
 {
 public:
 	static float VERTICES[18];
